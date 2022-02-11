@@ -14,7 +14,7 @@ int main()
     {
         arr[i] = rand()%100+1; 
     }
-    cout<<"Array before sorting: "<<endl; 
+    cout<<"Array before sorting: "; 
     for(int i=0; i<size; i++)
     {
         cout<<arr[i]<<" "; 
