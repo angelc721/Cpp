@@ -71,7 +71,9 @@ string FindMoon(Moon x, Planet arr[8])
         for(int j=0; j<3; j++)
         {
             if(x.getName()==(arr[i].getMoon(j)).getName())
-            return arr[i].getName();
+            {
+                return arr[i].getName();
+            }
         }
     }
 }
