@@ -8,7 +8,7 @@ class findArea
     findArea(){}
     findArea(int x)
     {
-        cout<<x<<endl; 
+        cout<<x*x<<endl; 
     }
     findArea(int w, int h)
     {
