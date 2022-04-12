@@ -4,30 +4,21 @@
 #include <stdio.h>
 #include <ctime>
 using namespace std;
-
 int main()
 {
     srand(time(NULL));
-    int m, n;
-    cout<<"Type in the column: ";
-    cin>>m;
-    cout<<endl;
-    cout<<"Type in the row: ";
+    int n;
+
+    cout<<"Enter the number of element: ";
     cin>>n;
+    char arr[n];
+    
     cout<<endl;
-
-    char arr[m][n];
-    for (int i=0; i<n; i++)
+    for (int i=0; i<=n; i++)
     {
-        for(int j=0; j<m; j++)
-        {
-            int r = rand()%25+'a';
-            char ch = (char)r;
-            arr[i][j] = ch;
-            cout<<arr[i][j]<<" ";
-        }
-        cout<<endl;
-
+        arr[i]= rand()%25+'a';
+        cout<<arr[i]<<" ";
     }
     return 0;
+
 }
