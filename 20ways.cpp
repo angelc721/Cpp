@@ -1,5 +1,8 @@
 //cpp practice test #2 
 #include <iostream> 
+#include <vector> 
+#include <stdio.h>
+#include <algorithm> 
 using namespace std; 
 void method1()
 {
@@ -178,6 +181,44 @@ void method14()
             cout<<endl; 
         }
     }
+    cout<<endl; 
+}
+void printArray2D(int* list, int row, int col)
+{
+    for(int i=0; i<row; i++)
+    {
+        for(int j=0; j<col; j++)
+        {
+            cout<<list[i*col+j]<<" "; 
+        }
+        cout<<endl; 
+    }
+}
+void method15()
+{
+    int list1[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int row1 = sizeof(list1)/sizeof(list1[0]); 
+    int col1 = sizeof(list1[0])/sizeof(list1[0][0]);
+    printArray2D((int*)list1, row1, col1); 
+}
+void print(vector <int> const &a) 
+{
+    for(int count = 0; count < 3; count++){
+        cout << a.at(count) << ' ';
+    }
+    cout << endl;
+    for(int count = 3; count < 6; count++){
+           cout << a.at(count) << ' ';
+    }
+    cout << endl;
+    for(int count = 6; count < 9; count++){
+        cout << a.at(count) << ' ';
+    }
+}
+void method16()
+{
+    vector<int> a = {1,2,3,4,5,6,7,8,9};
+   print(a);
 }
 int main()
 {
@@ -195,4 +236,6 @@ int main()
     method12(); 
     method13(); 
     method14();
+    method15(); 
+    method16(); 
 }
